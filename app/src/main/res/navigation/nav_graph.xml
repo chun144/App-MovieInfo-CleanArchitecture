@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navGraph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.congvtt1.smartmovie.movie.fragment.discover.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.congvtt1.smartmovie.movie.fragment.search.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.congvtt1.smartmovie.movie.fragment.genres.GenresFragment"
+        android:label="genres_fragment"
+        tools:layout="@layout/fragment_genres">
+        <action
+            android:id="@+id/action_genresFragment_to_genreFragment"
+            app:destination="@id/movieGenreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieGenreFragment"
+        android:name="com.congvtt1.smartmovie.movie.fragment.genres.MovieGenreFragment"
+        android:label="movie_genre_fragment"
+        tools:layout="@layout/fragment_movie_genre">
+        <argument
+            android:name="genreId"
+            app:argType="long" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_genreFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.congvtt1.smartmovie.movie.fragment.detail.DetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movieId"
+            app:argType="long" />
+    </fragment>
+</navigation>

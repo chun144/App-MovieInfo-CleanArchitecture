@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/discover"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/round_grid_view_24"/>
+    <item android:title="@string/search"
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/baseline_search_24"/>
+    <item android:title="@string/genres"
+        android:id="@+id/genresFragment"
+        android:icon="@drawable/baseline_movie_24"/>
+    <item android:title="@string/artists"
+        android:id="@+id/artistsFragment"
+        android:enabled="false"
+        android:icon="@drawable/baseline_account_circle_24"/>
+</menu>
